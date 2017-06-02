@@ -63,7 +63,6 @@ describe("Graph", () => {
     //assert
     const result = g.toArray();
     demand(result).be.eql(["pickle", "jam", "cheese"]);
-    //OK, but we have a problem, because when demand equal was ["jam", "pickle", "cheese"], it failed. This seems a small issue, since dependencies are met in each case, but I think we need to make the ordering really secure?
   });
 
   describe("impossible dependency chains", () => {
