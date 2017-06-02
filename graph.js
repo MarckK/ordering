@@ -12,7 +12,6 @@ class Graph {
     while (temp.size) {
       let size = temp.size;
       temp.forEach(item => {
-        // console.log(item.dependentOn);
         let adm = false;
         let hasNoDependency = false;
         let dependencyMet = false;
@@ -21,7 +20,6 @@ class Graph {
         } else if (item.dependentOn.constructor === Array) {
           if (allDependenciesMet(results, item.dependentOn)) adm = true;
         } else {
-          //check if results holding a dependency that an item in temp needs
           dependencyMet = results.includes(item.dependentOn);
         }
         if (hasNoDependency || dependencyMet || adm) {
