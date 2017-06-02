@@ -1,5 +1,3 @@
-// this uses Mocha and Must.js
-
 const Graph = require("./graph");
 
 const demand = require("must");
